@@ -14,7 +14,7 @@ namespace GarysWholesaleGarage
 
         public override void Drive()
         {
-            Console.WriteLine("Zoooooom!");
+            Console.WriteLine($"The {MainColor} Zero zips by you. Yeeeeoooowww!");
         }
     }
 }

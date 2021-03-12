@@ -13,7 +13,7 @@ namespace GarysWholesaleGarage
 
         public override void Drive()
         {
-            Console.WriteLine("Zoooooom!");
+            Console.WriteLine($"The {MainColor} Ram growls by you.  Rrrrruuuummmbbble!");
         }
     }
 }

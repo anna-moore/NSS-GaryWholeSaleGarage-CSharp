@@ -6,7 +6,7 @@ namespace GarysWholesaleGarage
     {
         static void Main(string[] args)
         {
-            Zero moto = new Zero()
+            Zero Moto = new Zero()
             {
                 BatteryKWh = 2000,
                 MainColor = "white",
@@ -20,19 +20,40 @@ namespace GarysWholesaleGarage
                 MaximumOccupancy = "10"
             };
 
-            Tesla tes = new Tesla()
+            Tesla Tes = new Tesla()
             {
                 BatteryKWh = 2300,
                 MainColor = "black",
                 MaximumOccupancy = "4"
             };
 
-            Ram ra = new Ram()
+            Ram Ra = new Ram()
             {
                 FuelCapacity = 340,
                 MainColor = "sky blue",
                 MaximumOccupancy = "5"
             };
+
+            Ces.Drive();
+            Ces.Turn("left");
+            Ces.Stop();
+            Console.WriteLine("");
+
+            Tes.Drive();
+            Tes.Turn("right");
+            Tes.Stop();
+            Console.WriteLine("");
+
+            Ra.Drive();
+            Ra.Turn("left");
+            Ra.Stop();
+            Console.WriteLine("");
+
+            Moto.Drive();
+            Moto.Turn("right");
+            Moto.Stop();
+            Console.WriteLine("");
+
         }
     }
 }
