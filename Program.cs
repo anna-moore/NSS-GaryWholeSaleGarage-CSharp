@@ -6,6 +6,7 @@ namespace GarysWholesaleGarage
     {
         static void Main(string[] args)
         {
+            //Create new cars
             Zero Moto = new Zero()
             {
                 BatteryKWh = 2000,
@@ -34,6 +35,7 @@ namespace GarysWholesaleGarage
                 MaximumOccupancy = "5"
             };
 
+            //Call method on all cars
             Ces.Drive();
             Ces.Turn("left");
             Ces.Stop();
