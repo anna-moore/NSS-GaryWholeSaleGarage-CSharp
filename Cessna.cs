@@ -2,13 +2,14 @@ using System;
 
 namespace GarysWholesaleGarage
 {
-    public class Cessna : Vehicle // Propellor light aircraft
+    public class Cessna : Vehicle, IGasVehicle // Propellor light aircraft
     {
         public double FuelCapacity { get; set; }
-
+        public int CurrentTankPercentage { get; set; }
         public void RefuelTank()
         {
-            // method definition omitted
+            Console.WriteLine("refueling Cessna");
+            CurrentTankPercentage = 100;
         }
 
         public override void Drive()

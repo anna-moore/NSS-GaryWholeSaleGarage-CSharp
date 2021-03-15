@@ -20,7 +20,8 @@ namespace GarysWholesaleGarage
             {
                 FuelCapacity = 3600,
                 MainColor = "gray",
-                MaximumOccupancy = "10"
+                MaximumOccupancy = "10",
+                CurrentTankPercentage = 40
             };
 
             Tesla Tes = new Tesla()
@@ -35,7 +36,8 @@ namespace GarysWholesaleGarage
             {
                 FuelCapacity = 340,
                 MainColor = "sky blue",
-                MaximumOccupancy = "5"
+                MaximumOccupancy = "5",
+                CurrentTankPercentage = 60
             };
 
             List<IElectricVehicle> electricVehicles = new List<IElectricVehicle>() {
@@ -46,6 +48,39 @@ namespace GarysWholesaleGarage
             foreach (IElectricVehicle ev in electricVehicles)
             {
                 Console.WriteLine($"{ev.CurrentChargePercentage}%");
+            }
+
+            foreach (IElectricVehicle ev in electricVehicles)
+            {
+                ev.ChargeBattery();
+            }
+
+            foreach (IElectricVehicle ev in electricVehicles)
+            {
+                Console.WriteLine($"{ev.CurrentChargePercentage}%");
+            }
+            Console.WriteLine("");
+            /***********************************************/
+
+            List<IGasVehicle> gasVehicles = new List<IGasVehicle>(){
+                Ra, Ces
+            };
+
+            Console.WriteLine("Gas Vehicles");
+            foreach (IGasVehicle gv in gasVehicles)
+            {
+                Console.WriteLine($"{gv.CurrentTankPercentage}%");
+            }
+
+            foreach (IGasVehicle gv in gasVehicles)
+            {
+                // This should completely refuel the gas tank
+                gv.RefuelTank();
+            }
+
+            foreach (IGasVehicle gv in gasVehicles)
+            {
+                Console.WriteLine($"{gv.CurrentTankPercentage}%");
             }
             Console.WriteLine("");
 

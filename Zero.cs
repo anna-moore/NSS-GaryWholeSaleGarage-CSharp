@@ -10,6 +10,7 @@ namespace GarysWholesaleGarage
         public void ChargeBattery()
         {
             Console.WriteLine("Charging the battery.");
+            CurrentChargePercentage = 100;
         }
 
         public override void Drive()
