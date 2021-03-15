@@ -14,7 +14,7 @@ namespace GarysWholesaleGarage
 
         public virtual void Turn(string direction)
         {
-            Console.WriteLine($"The vehile carefully turns {direction}.");
+            Console.WriteLine($"The vehicle carefully turns {direction}.");
         }
 
         public virtual void Stop()
