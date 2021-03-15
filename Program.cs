@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace GarysWholesaleGarage
 {
@@ -11,7 +12,8 @@ namespace GarysWholesaleGarage
             {
                 BatteryKWh = 2000,
                 MainColor = "white",
-                MaximumOccupancy = "2"
+                MaximumOccupancy = "2",
+                CurrentChargePercentage = 89
             };
 
             Cessna Ces = new Cessna()
@@ -25,7 +27,8 @@ namespace GarysWholesaleGarage
             {
                 BatteryKWh = 2300,
                 MainColor = "black",
-                MaximumOccupancy = "4"
+                MaximumOccupancy = "4",
+                CurrentChargePercentage = 23
             };
 
             Ram Ra = new Ram()
@@ -34,6 +37,17 @@ namespace GarysWholesaleGarage
                 MainColor = "sky blue",
                 MaximumOccupancy = "5"
             };
+
+            List<IElectricVehicle> electricVehicles = new List<IElectricVehicle>() {
+                Moto, Tes
+            };
+
+            Console.WriteLine("Electric Vehicles");
+            foreach (IElectricVehicle ev in electricVehicles)
+            {
+                Console.WriteLine($"{ev.CurrentChargePercentage}%");
+            }
+            Console.WriteLine("");
 
             //Call method on all cars
             Ces.Drive();
