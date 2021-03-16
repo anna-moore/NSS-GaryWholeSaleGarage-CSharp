@@ -1,6 +1,6 @@
 # NSS-GaryWholeSaleGarage-CSharp
 
-## Practice: Custom Colors and Sounds
+## Practice: Custom Colors and Sounds (run on terminal with dotnet run)
 
 1. Move all common properties in your vehicles to a new **`Vehicle`** class.
 1. Create an instance of each vehicle.
